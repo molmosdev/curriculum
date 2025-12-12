@@ -11,7 +11,7 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
     >
       <img src="/images/profile.jpeg" class="h-25 w-25 rounded" alt="Profile picture" />
       <div class="flex flex-col justify-between max-w-[calc(100vw-10.5rem)]">
-        <h1 class="text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
+        <h1 class="text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
           Marc Olmos Cabezas
         </h1>
         <span class="text-sm opacity-60 overflow-hidden text-ellipsis whitespace-nowrap">
