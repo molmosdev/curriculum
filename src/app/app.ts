@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
+import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
 @Component({
   selector: 'cv-root',
@@ -56,7 +56,6 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
           <div class="flex flex-col">
             <div
               class="flex justify-between items-center cursor-pointer"
-              tabindex="0"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 0 ? -1 : 0)"
             >
               <div class="flex flex-col">
@@ -118,7 +117,6 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
           <div class="flex flex-col">
             <div
               class="flex justify-between items-center cursor-pointer"
-              tabindex="1"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 1 ? -1 : 1)"
             >
               <div class="flex flex-col">
@@ -172,7 +170,6 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
           <div class="flex flex-col">
             <div
               class="flex justify-between items-center cursor-pointer"
-              tabindex="2"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 2 ? -1 : 2)"
             >
               <div class="flex flex-col">
@@ -227,7 +224,6 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
           <div class="flex flex-col">
             <div
               class="flex justify-between items-center cursor-pointer"
-              tabindex="3"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 3 ? -1 : 3)"
             >
               <div class="flex flex-col">
@@ -278,7 +274,6 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
           <div class="flex flex-col">
             <div
               class="flex justify-between items-center cursor-pointer"
-              tabindex="4"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 4 ? -1 : 4)"
             >
               <div class="flex flex-col">
