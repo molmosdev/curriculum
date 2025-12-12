@@ -53,12 +53,12 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
           Professional Experience
         </h1>
         <div class="flex flex-col gap-2">
-          <div
-            class="flex flex-col cursor-pointer"
-            tabindex="0"
-            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 0 ? -1 : 0)"
-          >
-            <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between items-center cursor-pointer"
+              tabindex="0"
+              (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 0 ? -1 : 0)"
+            >
               <div class="flex flex-col">
                 <span>Senior Frontend Developer</span>
                 <span class="text-sm opacity-60">Circontrol (05/2023 - now)</span>
@@ -73,19 +73,54 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
 
             @if (professionalExperienceOpen() === 0) {
             <div class="text-sm mt-1 mb-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
-              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
-              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
-              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+              <div
+                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+              >
+                <div class="p-2">
+                  <strong>Tasks</strong>
+                  <div>
+                    Conduct technical analysis and provide accurate effort estimations. Define
+                    architecture improvements focused on scalability and maintainability, establish
+                    team-wide best practices, and introduce automated linting and formatting
+                    workflows using ESLint and Prettier. Manage progressive Angular upgrades from
+                    v17 through v20, coordinating updates to LTS releases.
+                  </div>
+                </div>
+
+                <div class="p-2">
+                  <strong>Projects</strong>
+                  <div>
+                    Contributed to internal initiatives including: WebSetup — a web dashboard for
+                    configuring EV chargers; a touch-screen web application deployed on company
+                    chargers to manage user charging workflows; a middleware service integrating the
+                    backend with charger UI applications; and a Circutor migration project to
+                    replace SCADA with a Grafana-based web solution for charger data management.
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                  <div class="p-2">
+                    <strong>Methodologies</strong>
+                    <div>Agile, Scrum</div>
+                  </div>
+                  <div class="p-2">
+                    <strong>Stack</strong>
+                    <div>
+                      Angular (up to v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3,
+                      JavaScript, TypeScript, PrimeNG, Git, Jest
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             }
           </div>
-          <div
-            class="flex flex-col cursor-pointer"
-            tabindex="1"
-            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 1 ? -1 : 1)"
-          >
-            <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between items-center cursor-pointer"
+              tabindex="1"
+              (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 1 ? -1 : 1)"
+            >
               <div class="flex flex-col">
                 <span>Fullstack Developer</span>
                 <span class="text-sm opacity-60">Deloitte (11/2021 - 05/2023)</span>
@@ -99,21 +134,47 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
             </div>
 
             @if (professionalExperienceOpen() === 1) {
-            <div class="text-sm mt-1 mb-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
-              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
-              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
-              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            <div class="text-sm mt-2 mb-3">
+              <div
+                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+              >
+                <div class="p-2">
+                  <strong>Tasks</strong>
+                  <div>
+                    Hold client meetings, Create and maintain Angular projects, Technical analysis,
+                    Development time estimation, Testing
+                  </div>
+                </div>
+
+                <div class="p-2">
+                  <strong>Projects</strong>
+                  <div>OVT (Virtual Procedures Office) for Barcelona City Council</div>
+                </div>
+
+                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                  <div class="p-2">
+                    <strong>Methodologies</strong>
+                    <div>Agile, Scrum</div>
+                  </div>
+                  <div class="p-2">
+                    <strong>Stack</strong>
+                    <div>
+                      Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java,
+                      Spring Boot, SQL, GSAP
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             }
           </div>
 
-          <div
-            class="flex flex-col cursor-pointer"
-            tabindex="2"
-            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 2 ? -1 : 2)"
-          >
-            <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between items-center cursor-pointer"
+              tabindex="2"
+              (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 2 ? -1 : 2)"
+            >
               <div class="flex flex-col">
                 <span>Frontend Developer</span>
                 <span class="text-sm opacity-60">Fun Sport Express SL (03/2021 - 10/2021)</span>
@@ -127,24 +188,51 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
             </div>
 
             @if (professionalExperienceOpen() === 2) {
-            <div class="text-sm mt-1 mb-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
-              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
-              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
-              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            <div class="text-sm mt-2 mb-3">
+              <div
+                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+              >
+                <div class="p-2">
+                  <strong>Tasks</strong>
+                  <div>
+                    Hold client meetings, Create and maintain Angular projects, Technical analysis,
+                    Development time estimation, Testing
+                  </div>
+                </div>
+
+                <div class="p-2">
+                  <strong>Projects</strong>
+                  <div>
+                    Internal Angular application for product stock management, Full redesign of one
+                    of the company's websites
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                  <div class="p-2">
+                    <strong>Methodologies</strong>
+                    <div>Agile, Scrum</div>
+                  </div>
+                  <div class="p-2">
+                    <strong>Stack</strong>
+                    <div>Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Jira, GSAP</div>
+                  </div>
+                </div>
+              </div>
             </div>
+
             }
           </div>
 
-          <div
-            class="flex flex-col cursor-pointer"
-            tabindex="3"
-            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 3 ? -1 : 3)"
-          >
-            <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between items-center cursor-pointer"
+              tabindex="3"
+              (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 3 ? -1 : 3)"
+            >
               <div class="flex flex-col">
                 <span>Freelance Front-End Developer</span>
-                <span class="text-sm opacity-60">Autónomo (05/2020 - 10/2021)</span>
+                <span class="text-sm opacity-60">Freelance (05/2020 - 10/2021)</span>
               </div>
               <ng-icon
                 [name]="
@@ -155,21 +243,44 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
             </div>
 
             @if (professionalExperienceOpen() === 3) {
-            <div class="text-sm mt-1 mb-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
-              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
-              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
-              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            <div class="text-sm mt-2 mb-3">
+              <div
+                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+              >
+                <div class="p-2">
+                  <strong>Tasks</strong>
+                  <div>
+                    Hold client meetings, Create and maintain Angular projects, Technical analysis,
+                    Development time estimation, Testing
+                  </div>
+                </div>
+
+                <div class="p-2">
+                  <strong>Projects</strong>
+                  <div>Luxury flat rental agency application, Butcher shop web application</div>
+                </div>
+
+                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                  <div class="p-2">
+                    <strong>Methodologies</strong>
+                    <div>Agile, Scrum</div>
+                  </div>
+                  <div class="p-2">
+                    <strong>Stack</strong>
+                    <div>Angular, HTML5, CSS3, JavaScript, TypeScript, Bootstrap, GSAP</div>
+                  </div>
+                </div>
+              </div>
             </div>
             }
           </div>
 
-          <div
-            class="flex flex-col cursor-pointer"
-            tabindex="4"
-            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 4 ? -1 : 4)"
-          >
-            <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between items-center cursor-pointer"
+              tabindex="4"
+              (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 4 ? -1 : 4)"
+            >
               <div class="flex flex-col">
                 <span>IT Risk Advisory Assistant (Trainee)</span>
                 <span class="text-sm opacity-60">Deloitte (12/2019 - 04/2020)</span>
@@ -183,58 +294,90 @@ import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lu
             </div>
 
             @if (professionalExperienceOpen() === 4) {
-            <div class="text-sm mt-1 mb-3">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
-              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
-              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
-              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            <div class="text-sm mt-2 mb-3">
+              <div
+                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+              >
+                <div class="p-2">
+                  <strong>Tasks</strong>
+                  <div>
+                    Technological risks analysis, Hold client meetings, Prepare PowerPoint
+                    presentations, Create Excel documents with macros
+                  </div>
+                </div>
+
+                <div class="p-2">
+                  <strong>Projects</strong>
+                  <div>Analysis of Banco Sabadell's main technological risks</div>
+                </div>
+
+                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                  <div class="p-2">
+                    <strong>Methodologies</strong>
+                    <div>Agile, Scrum</div>
+                  </div>
+                  <div class="p-2">
+                    <strong>Stack</strong>
+                    <div>Excel, PowerPoint</div>
+                  </div>
+                </div>
+              </div>
             </div>
             }
           </div>
         </div>
       </section>
 
-      <!-- Certificates -->
+      <!-- Languages -->
       <section class="flex flex-col gap-2">
         <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">
-          Certificates
+          Languages
         </h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col">
-            <span>Cambridge English Level 2 Certificate in ESOL International</span>
-            <span class="text-sm opacity-60">Cambridge English (2020)</span>
+            <span>Spanish</span>
+            <span class="text-sm opacity-60">Native</span>
           </div>
           <div class="flex flex-col">
-            <span>Introduction to Meteor.js Development</span>
-            <span class="text-sm opacity-60">University of London (2020)</span>
+            <span>Catalan</span>
+            <span class="text-sm opacity-60">Native</span>
           </div>
           <div class="flex flex-col">
-            <span>Responsive Web Design</span>
-            <span class="text-sm opacity-60">University of London (2020)</span>
+            <span>English</span>
+            <span class="text-sm opacity-60">C1 (Cambridge English Advanced)</span>
           </div>
-          <div class="flex flex-col">
-            <span>Responsive Website Basics: Code with HTML, CSS and JavaScript</span>
-            <span class="text-sm opacity-60">University of London (Coursera) (2020)</span>
-          </div>
-          <div class="flex flex-col">
-            <span>Web Application Development with JavaScript and MongoDB</span>
-            <span class="text-sm opacity-60">University of London (2020)</span>
-          </div>
-          <div class="flex flex-col">
-            <span>Introducción a la programación en Python I</span>
-            <span class="text-sm opacity-60">Pontificia Universidad Católica de Chile (2019)</span>
-          </div>
-          <div class="flex flex-col">
-            <span>Curso de Desarrollo de Apps Móviles</span>
-            <span class="text-sm opacity-60">Google Actívate (2018)</span>
-          </div>
-          <div class="flex flex-col">
-            <span>Curso de Marketing Digital</span>
-            <span class="text-sm opacity-60">Google Actívate (2018)</span>
-          </div>
-          <div class="flex flex-col">
-            <span>Cambridge English Level 1 Certificate in ESOL International</span>
-            <span class="text-sm opacity-60">Cambridge English (2015)</span>
+        </div>
+      </section>
+
+      <!-- Stack -->
+      <section class="flex flex-col gap-2">
+        <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">Stack</h1>
+        <div class="text-sm mt-1 mb-3">
+          <div
+            class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+          >
+            <div class="p-2">
+              <strong>Frontend</strong>
+              <div>
+                Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript
+              </div>
+            </div>
+
+            <div class="p-2">
+              <strong>Backend / Tools</strong>
+              <div>NestJS, Node.js, Express, Hono, SQL, Git, ESLint, Prettier</div>
+            </div>
+
+            <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+              <div class="p-2">
+                <strong>Testing / QA</strong>
+                <div>Jest, Playwright</div>
+              </div>
+              <div class="p-2">
+                <strong>DevOps / Monitoring</strong>
+                <div>Docker, CI/CD, Grafana</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
