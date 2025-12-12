@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { lucideAArrowUp, lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
 @Component({
   selector: 'cv-root',
-  imports: [],
+  imports: [NgIcon],
   template: `
     <header
       class="flex gap-4 sticky top-0 left-0 w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-b border-neutral-200 dark:border-neutral-800"
@@ -27,7 +29,7 @@ import { Component, signal } from '@angular/core';
         <a class="text-sm opacity-60 underline" href="tel:+34606872046">606872046</a>
       </div>
     </header>
-    <main class="flex flex-col pb-40 max-w-3xl mx-auto gap-7 pt-7">
+    <main class="flex flex-col pb-40 w-full max-w-xl mx-auto gap-7 pt-7">
       <!-- Academic Background -->
       <section class="flex flex-col gap-2">
         <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">
@@ -51,25 +53,143 @@ import { Component, signal } from '@angular/core';
           Professional Experience
         </h1>
         <div class="flex flex-col gap-2">
-          <div class="flex flex-col">
-            <span>Senior Frontend Developer</span>
-            <span class="text-sm opacity-60">Circontrol (05/2023 - now)</span>
+          <div
+            class="flex flex-col cursor-pointer"
+            tabindex="0"
+            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 0 ? -1 : 0)"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex flex-col">
+                <span>Senior Frontend Developer</span>
+                <span class="text-sm opacity-60">Circontrol (05/2023 - now)</span>
+              </div>
+              <ng-icon
+                [name]="
+                  professionalExperienceOpen() === 0 ? 'lucideChevronUp' : 'lucideChevronDown'
+                "
+                size="22"
+              />
+            </div>
+
+            @if (professionalExperienceOpen() === 0) {
+            <div class="text-sm mt-1 mb-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
+              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
+              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
+              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            </div>
+            }
           </div>
-          <div class="flex flex-col">
-            <span>Fullstack Developer</span>
-            <span class="text-sm opacity-60">Deloitte (11/2021 - 05/2023)</span>
+          <div
+            class="flex flex-col cursor-pointer"
+            tabindex="1"
+            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 1 ? -1 : 1)"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex flex-col">
+                <span>Fullstack Developer</span>
+                <span class="text-sm opacity-60">Deloitte (11/2021 - 05/2023)</span>
+              </div>
+              <ng-icon
+                [name]="
+                  professionalExperienceOpen() === 1 ? 'lucideChevronUp' : 'lucideChevronDown'
+                "
+                size="22"
+              />
+            </div>
+
+            @if (professionalExperienceOpen() === 1) {
+            <div class="text-sm mt-1 mb-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
+              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
+              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
+              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            </div>
+            }
           </div>
-          <div class="flex flex-col">
-            <span>Frontend Developer</span>
-            <span class="text-sm opacity-60">Fun Sport Express SL (03/2021 - 10/2021)</span>
+
+          <div
+            class="flex flex-col cursor-pointer"
+            tabindex="2"
+            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 2 ? -1 : 2)"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex flex-col">
+                <span>Frontend Developer</span>
+                <span class="text-sm opacity-60">Fun Sport Express SL (03/2021 - 10/2021)</span>
+              </div>
+              <ng-icon
+                [name]="
+                  professionalExperienceOpen() === 2 ? 'lucideChevronUp' : 'lucideChevronDown'
+                "
+                size="22"
+              />
+            </div>
+
+            @if (professionalExperienceOpen() === 2) {
+            <div class="text-sm mt-1 mb-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
+              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
+              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
+              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            </div>
+            }
           </div>
-          <div class="flex flex-col">
-            <span>Freelance Front-End Developer</span>
-            <span class="text-sm opacity-60">Autónomo (05/2020 - 10/2021)</span>
+
+          <div
+            class="flex flex-col cursor-pointer"
+            tabindex="3"
+            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 3 ? -1 : 3)"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex flex-col">
+                <span>Freelance Front-End Developer</span>
+                <span class="text-sm opacity-60">Autónomo (05/2020 - 10/2021)</span>
+              </div>
+              <ng-icon
+                [name]="
+                  professionalExperienceOpen() === 3 ? 'lucideChevronUp' : 'lucideChevronDown'
+                "
+                size="22"
+              />
+            </div>
+
+            @if (professionalExperienceOpen() === 3) {
+            <div class="text-sm mt-1 mb-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
+              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
+              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
+              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            </div>
+            }
           </div>
-          <div class="flex flex-col">
-            <span>IT Risk Advisory Assistant (Trainee)</span>
-            <span class="text-sm opacity-60">Deloitte (12/2019 - 04/2020)</span>
+
+          <div
+            class="flex flex-col cursor-pointer"
+            tabindex="4"
+            (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 4 ? -1 : 4)"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex flex-col">
+                <span>IT Risk Advisory Assistant (Trainee)</span>
+                <span class="text-sm opacity-60">Deloitte (12/2019 - 04/2020)</span>
+              </div>
+              <ng-icon
+                [name]="
+                  professionalExperienceOpen() === 4 ? 'lucideChevronUp' : 'lucideChevronDown'
+                "
+                size="22"
+              />
+            </div>
+
+            @if (professionalExperienceOpen() === 4) {
+            <div class="text-sm mt-1 mb-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias molestiae
+              asperiores nemo dignissimos optio itaque maiores facere, aperiam odio a consequuntur
+              eius assumenda labore explicabo eligendi! Aliquam, fugit magnam tempora voluptatum
+              perferendis iusto ipsum nostrum! Incidunt iure nulla dolores similique.
+            </div>
+            }
           </div>
         </div>
       </section>
@@ -123,5 +243,8 @@ import { Component, signal } from '@angular/core';
   host: {
     class: 'flex flex-col justify-center',
   },
+  providers: [provideIcons({ lucideChevronDown, lucideChevronUp })],
 })
-export class App {}
+export class App {
+  professionalExperienceOpen = signal(-1);
+}
