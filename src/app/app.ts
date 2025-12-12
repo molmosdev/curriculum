@@ -35,12 +35,12 @@ import { Component, signal } from '@angular/core';
         </h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col">
-            <span>Degree in Business and Technology</span>
-            <span class="text-sm opacity-60">UAB (2016 - 2020)</span>
-          </div>
-          <div class="flex flex-col">
             <span>Master in High Performance Web Programming</span>
             <span class="text-sm opacity-60">URL (2020 - 2022)</span>
+          </div>
+          <div class="flex flex-col">
+            <span>Degree in Business and Technology</span>
+            <span class="text-sm opacity-60">UAB (2016 - 2020)</span>
           </div>
         </div>
       </section>
