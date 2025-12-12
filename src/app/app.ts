@@ -12,13 +12,19 @@ import { Component, signal } from '@angular/core';
         <h1 class="text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
           Marc Olmos Cabezas
         </h1>
-        <span class="overflow-hidden text-ellipsis whitespace-nowrap"
-          >Senior Frontend Developer</span
+        <span class="text-sm opacity-60 overflow-hidden text-ellipsis whitespace-nowrap">
+          Senior Frontend Developer</span
         >
-        <a class="underline overflow-hidden text-ellipsis" href="mailto:olmoscabezasmarc@gmail.com">
+        <span class="text-sm opacity-60 overflow-hidden text-ellipsis whitespace-nowrap">
+          Mollet del Vallés, Barcelona
+        </span>
+        <a
+          class="text-sm opacity-60 underline overflow-hidden text-ellipsis"
+          href="mailto:olmoscabezasmarc@gmail.com"
+        >
           olmoscabezasmarc@gmail.com
         </a>
-        <a class="underline" href="tel:+34606872046">606872046</a>
+        <a class="text-sm opacity-60 underline" href="tel:+34606872046">606872046</a>
       </div>
     </header>
     <main class="flex flex-col pb-40 max-w-3xl mx-auto gap-7 pt-7">
