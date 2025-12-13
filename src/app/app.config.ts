@@ -12,6 +12,12 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay()),
-    provideAppInitializer(() => inject(TranslationManager).setLanguage('ca')),
+    provideAppInitializer(() => {
+      if (typeof window === 'undefined') {
+        return;
+      }
+
+      return inject(TranslationManager).setLanguage('ca');
+    }),
   ],
 };
