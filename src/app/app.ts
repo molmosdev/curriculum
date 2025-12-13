@@ -1,4 +1,4 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component, signal, inject, afterRenderEffect } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
@@ -488,5 +488,9 @@ export class App {
 
   setLanguage(lang: string) {
     this.translationManager.setLanguage(lang);
+  }
+
+  constructor() {
+    afterRenderEffect(() => this.translationManager.setLanguage('en'));
   }
 }
