@@ -1,0 +1,94 @@
+{
+  "header": {
+    "name": "Marc Olmos Cabezas",
+    "role": "Desarrollador Frontend Senior",
+    "location": "Mollet del Vallés, Barcelona",
+    "email": "olmoscabezasmarc@gmail.com",
+    "phone": "606872046"
+  },
+  "academic": {
+    "title": "Formación Académica",
+    "masters": "Máster en Programación Web de Alto Rendimiento",
+    "masters_institution": "URL (2020 - 2022)",
+    "degree": "Grado en Empresa y Tecnología",
+    "degree_institution": "UAB (2016 - 2020)"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "tasks": "Tareas",
+    "projects": "Proyectos",
+    "methodologies": "Metodologías",
+    "stack": "Tecnologías",
+    "senior_title": "Desarrollador Frontend Senior",
+    "senior_company": "Circontrol (05/2023 - ahora)",
+    "senior_tasks": "Realizar análisis técnicos y proporcionar estimaciones de esfuerzo precisas. Definir mejoras arquitectónicas centradas en la escalabilidad y mantenibilidad, establecer buenas prácticas a nivel de equipo e introducir flujos de trabajo automatizados de linting y formateo usando ESLint y Prettier. Gestionar actualizaciones progresivas de Angular desde v17 hasta v20, coordinando actualizaciones a versiones LTS.",
+    "senior_projects": "Contribuciones a iniciativas internas incluyendo: WebSetup — un panel web para configurar cargadores de VE; una aplicación web para pantallas táctiles desplegada en cargadores de la compañía para gestionar los flujos de carga; un servicio middleware que integra el backend con las aplicaciones de UI de cargadores; y un proyecto de migración de Circutor para reemplazar SCADA con una solución web basada en Grafana para la gestión de datos de cargadores.",
+    "fullstack_title": "Desarrollador Fullstack",
+    "fullstack_company": "Deloitte (11/2021 - 05/2023)",
+    "fullstack_tasks": "Realizar reuniones con clientes, Crear y mantener proyectos Angular, Análisis técnico, Estimación de tiempo de desarrollo, Testing",
+    "fullstack_projects": "OVT (Oficina Virtual de Trámites) para el Ayuntamiento de Barcelona; SEAT — aplicación Java que gestiona los estados de campañas de vehículos y el ciclo de movilización desde producción hasta concesionarios",
+    "frontend_title": "Desarrollador Frontend",
+    "frontend_company": "Fun Sport Express SL (03/2021 - 10/2021)",
+    "freelance_title": "Desarrollador Front-End Freelance",
+    "freelance_company": "Freelance (05/2020 - 10/2021)",
+    "trainee_title": "Asistente de Consultoría de Riesgos TIC (Prácticas)",
+    "trainee_company": "Deloitte (12/2019 - 04/2020)",
+    "common_methods": "Ágil, Scrum",
+    "senior_stack": "Angular (hasta v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3, JavaScript, TypeScript, PrimeNG, Git, Jest",
+    "fullstack_stack": "Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java, Spring Boot, SQL, GSAP",
+    "frontend_stack": "Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Jira, GSAP",
+    "freelance_stack": "Angular, Sanity, HTML5, CSS3, JavaScript, TypeScript, Bootstrap, GSAP",
+    "trainee_tasks": "Análisis de riesgos tecnológicos, Reuniones con clientes, Preparación de presentaciones en PowerPoint, Creación de documentos Excel con macros",
+    "trainee_projects": "Análisis de los principales riesgos tecnológicos de Banco Sabadell"
+  },
+  "languages": {
+    "title": "Idiomas",
+    "spanish": "Español",
+    "catalan": "Catalán",
+    "english": "Inglés",
+    "native": "Nativo",
+    "english_level": "C1 (Cambridge English Advanced)"
+  },
+  "stack": {
+    "title": "Tecnologías",
+    "frontend": "Frontend",
+    "frontend_list": "Angular (hasta v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript",
+    "backend": "Backend / Herramientas",
+    "backend_list": "NestJS, Node.js, Express, Hono, SQL, Git, ESLint, Prettier",
+    "testing": "Testing / QA",
+    "testing_list": "Jest, Playwright",
+    "devops": "DevOps / Monitorización",
+    "devops_list": "Docker, CI/CD, Grafana"
+  },
+  "projects": {
+    "title": "Últimos Proyectos Públicos",
+    "sunio": {
+      "title": "Sunio",
+      "desc": "Una aplicación web sencilla para compartir gastos. Sin descargas, sin cuentas y sin registro. Diseñada para dividir y seguir gastos compartidos de manera rápida y práctica."
+    },
+    "basis": {
+      "title": "Basis NG",
+      "desc": "Una librería de componentes Angular headless. Está dividida en dos paquetes: Primitives, que aporta componentes base sin estilo, y Styles, una capa basada en Tailwind que se integra con temas personalizados y sistemas de diseño."
+    },
+    "ahead": {
+      "title": "Ahead Careers",
+      "desc": "Una plataforma web para una empresa de reclutamiento, que combina un sitio corporativo con una sección de ofertas de empleo. Incluye un panel para gestionar ofertas y mostrar los servicios de la empresa de forma clara y profesional."
+    }
+  },
+  "footer": {
+    "download": "Descargar CV en PDF"
+  },
+  "alt": {
+    "profile": "Foto de perfil"
+  },
+  "aria": {
+    "download": "Descargar CV en PDF",
+    "lang_en": "Inglés",
+    "lang_es": "Español",
+    "lang_ca": "Catalán"
+  },
+  "experience_extra": {
+    "fullstack_seat_extra": "SEAT — aplicación Java que gestiona los estados de campañas de vehículos y el ciclo de movilización desde producción hasta concesionarios",
+    "trainee_tools": "Excel, PowerPoint"
+  }
+}

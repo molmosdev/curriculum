@@ -1,53 +1,60 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
+import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
 
 @Component({
   selector: 'cv-root',
-  imports: [NgIcon],
+  imports: [NgIcon, TranslatePipe],
   template: `
     <header
       class="flex gap-4 sticky top-0 left-0 w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-b border-neutral-200 dark:border-neutral-800"
     >
-      <img src="/images/profile.jpeg" class="h-27 w-27 rounded" alt="Profile picture" />
+      <img
+        src="/images/profile.jpeg"
+        class="h-27 w-27 rounded"
+        alt="{{ 'alt.profile' | translate }}"
+      />
       <div class="flex flex-col justify-between max-w-[calc(100vw-10.5rem)]">
         <h1 class="text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
-          Marc Olmos Cabezas
+          {{ 'header.name' | translate }}
         </h1>
         <span class="text-sm opacity-60 overflow-hidden text-ellipsis whitespace-nowrap">
-          Senior Frontend Developer</span
+          {{ 'header.role' | translate }}</span
         >
         <span class="text-sm opacity-60 overflow-hidden text-ellipsis whitespace-nowrap">
-          Mollet del Vallés, Barcelona
+          {{ 'header.location' | translate }}
         </span>
         <a
           class="text-sm opacity-60 underline overflow-hidden text-ellipsis"
-          href="mailto:olmoscabezasmarc@gmail.com"
+          href="mailto:{{ 'header.email' | translate }}"
         >
-          olmoscabezasmarc@gmail.com
+          {{ 'header.email' | translate }}
         </a>
-        <a class="text-sm opacity-60 underline" href="tel:+34606872046">606872046</a>
+        <a class="text-sm opacity-60 underline" href="tel:+34{{ 'header.phone' | translate }}">{{
+          'header.phone' | translate
+        }}</a>
       </div>
     </header>
     <main class="flex flex-col pb-40 w-full max-w-xl mx-auto gap-7 pt-7">
       <!-- Academic Background -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold">Academic Background</h1>
+        <h1 class="text-lg font-semibold">{{ 'academic.title' | translate }}</h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col">
-            <span>Master in High Performance Web Programming</span>
-            <span class="text-sm opacity-60">URL (2020 - 2022)</span>
+            <span>{{ 'academic.masters' | translate }}</span>
+            <span class="text-sm opacity-60">{{ 'academic.masters_institution' | translate }}</span>
           </div>
           <div class="flex flex-col">
-            <span>Degree in Business and Technology</span>
-            <span class="text-sm opacity-60">UAB (2016 - 2020)</span>
+            <span>{{ 'academic.degree' | translate }}</span>
+            <span class="text-sm opacity-60">{{ 'academic.degree_institution' | translate }}</span>
           </div>
         </div>
       </section>
 
       <!-- Professional Experience -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold">Professional Experience</h1>
+        <h1 class="text-lg font-semibold">{{ 'experience.title' | translate }}</h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <div
@@ -55,8 +62,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 0 ? -1 : 0)"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Senior Frontend Developer</span>
-                <span class="text-sm opacity-60">Circontrol (05/2023 - now)</span>
+                <span class="font-medium">{{ 'experience.senior_title' | translate }}</span>
+                <span class="text-sm opacity-60">{{
+                  'experience.senior_company' | translate
+                }}</span>
               </div>
               <ng-icon
                 [name]="
@@ -71,38 +80,29 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
             >
               <div class="py-2">
-                <span>Tasks</span>
+                <span>{{ 'experience.tasks' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Conduct technical analysis and provide accurate effort estimations. Define
-                  architecture improvements focused on scalability and maintainability, establish
-                  team-wide best practices, and introduce automated linting and formatting workflows
-                  using ESLint and Prettier. Manage progressive Angular upgrades from v17 through
-                  v20, coordinating updates to LTS releases.
+                  {{ 'experience.senior_tasks' | translate }}
                 </div>
               </div>
 
               <div class="py-2">
-                <span>Projects</span>
+                <span>{{ 'experience.projects' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Contributed to internal initiatives including: WebSetup — a web dashboard for
-                  configuring EV chargers; a touch-screen web application deployed on company
-                  chargers to manage user charging workflows; a middleware service integrating the
-                  backend with charger UI applications; and a Circutor migration project to replace
-                  SCADA with a Grafana-based web solution for charger data management.
+                  {{ 'experience.senior_projects' | translate }}
                 </div>
               </div>
 
               <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
                 <div class="p-2 pl-0">
-                  <span>Methodologies</span>
-                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                  <span>{{ 'experience.methodologies' | translate }}</span>
+                  <div class="text-sm opacity-60">
+                    {{ 'experience.common_methods' | translate }}
+                  </div>
                 </div>
                 <div class="p-2 pr-0">
-                  <span>Stack</span>
-                  <div class="text-sm opacity-60">
-                    Angular (up to v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3,
-                    JavaScript, TypeScript, PrimeNG, Git, Jest
-                  </div>
+                  <span>{{ 'experience.stack' | translate }}</span>
+                  <div class="text-sm opacity-60">{{ 'experience.senior_stack' | translate }}</div>
                 </div>
               </div>
             </div>
@@ -114,8 +114,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 1 ? -1 : 1)"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Fullstack Developer</span>
-                <span class="text-sm opacity-60">Deloitte (11/2021 - 05/2023)</span>
+                <span class="font-medium">{{ 'experience.fullstack_title' | translate }}</span>
+                <span class="text-sm opacity-60">{{
+                  'experience.fullstack_company' | translate
+                }}</span>
               </div>
               <ng-icon
                 [name]="
@@ -130,34 +132,33 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
             >
               <div class="py-2">
-                <span>Tasks</span>
+                <span>{{ 'experience.tasks' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Hold client meetings, Create and maintain Angular projects, Technical analysis,
-                  Development time estimation, Testing
+                  {{ 'experience.fullstack_tasks' | translate }}
                 </div>
               </div>
 
               <div class="py-2">
-                <span>Projects</span>
+                <span>{{ 'experience.projects' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  OVT (Virtual Procedures Office) for Barcelona City Council
+                  {{ 'experience.fullstack_projects' | translate }}
                 </div>
                 <div class="text-sm opacity-60">
-                  SEAT — Java application managing vehicle campaign states and mobilization
-                  lifecycle from production to dealerships
+                  {{ 'experience_extra.fullstack_seat_extra' | translate }}
                 </div>
               </div>
 
               <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
                 <div class="p-2 pl-0">
-                  <span>Methodologies</span>
-                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                  <span>{{ 'experience.methodologies' | translate }}</span>
+                  <div class="text-sm opacity-60">
+                    {{ 'experience.common_methods' | translate }}
+                  </div>
                 </div>
                 <div class="p-2 pr-0">
-                  <span>Stack</span>
+                  <span>{{ 'experience.stack' | translate }}</span>
                   <div class="text-sm opacity-60">
-                    Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java, Spring
-                    Boot, SQL, GSAP
+                    {{ 'experience.fullstack_stack' | translate }}
                   </div>
                 </div>
               </div>
@@ -170,8 +171,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 2 ? -1 : 2)"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Frontend Developer</span>
-                <span class="text-sm opacity-60">Fun Sport Express SL (03/2021 - 10/2021)</span>
+                <span class="font-medium">{{ 'experience.frontend_title' | translate }}</span>
+                <span class="text-sm opacity-60">{{
+                  'experience.frontend_company' | translate
+                }}</span>
               </div>
               <ng-icon
                 [name]="
@@ -186,30 +189,30 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
             >
               <div class="py-2">
-                <span>Tasks</span>
+                <span>{{ 'experience.tasks' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Hold client meetings, Create and maintain Angular projects, Technical analysis,
-                  Development time estimation, Testing
+                  {{ 'experience.fullstack_tasks' | translate }}
                 </div>
               </div>
 
               <div class="py-2">
-                <span>Projects</span>
+                <span>{{ 'experience.projects' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Internal Angular application for product stock management, Full redesign of one of
-                  the company's websites
+                  {{ 'experience.frontend_projects' | translate }}
                 </div>
               </div>
 
               <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
                 <div class="p-2 pl-0">
-                  <span>Methodologies</span>
-                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                  <span>{{ 'experience.methodologies' | translate }}</span>
+                  <div class="text-sm opacity-60">
+                    {{ 'experience.common_methods' | translate }}
+                  </div>
                 </div>
                 <div class="p-2 pr-0">
-                  <span>Stack</span>
+                  <span>{{ 'experience.stack' | translate }}</span>
                   <div class="text-sm opacity-60">
-                    Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Jira, GSAP
+                    {{ 'experience.frontend_stack' | translate }}
                   </div>
                 </div>
               </div>
@@ -222,8 +225,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 3 ? -1 : 3)"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Freelance Front-End Developer</span>
-                <span class="text-sm opacity-60">Freelance (05/2020 - 10/2021)</span>
+                <span class="font-medium">{{ 'experience.freelance_title' | translate }}</span>
+                <span class="text-sm opacity-60">{{
+                  'experience.freelance_company' | translate
+                }}</span>
               </div>
               <ng-icon
                 [name]="
@@ -238,31 +243,30 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
             >
               <div class="py-2">
-                <span>Tasks</span>
+                <span>{{ 'experience.tasks' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Hold client meetings, Create and maintain Angular projects, Technical analysis,
-                  Development time estimation, Testing
+                  {{ 'experience.fullstack_tasks' | translate }}
                 </div>
               </div>
 
               <div class="py-2">
-                <span>Projects</span>
+                <span>{{ 'experience.projects' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Ahead Careers — Public marketing website to showcase company services and an
-                  internal job dashboard to publish job offers and allow users to apply. Implemented
-                  with Angular and Sanity.
+                  {{ 'experience.freelance_projects' | translate }}
                 </div>
               </div>
 
               <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
                 <div class="p-2 pl-0">
-                  <span>Methodologies</span>
-                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                  <span>{{ 'experience.methodologies' | translate }}</span>
+                  <div class="text-sm opacity-60">
+                    {{ 'experience.common_methods' | translate }}
+                  </div>
                 </div>
                 <div class="p-2 pr-0">
-                  <span>Stack</span>
+                  <span>{{ 'experience.stack' | translate }}</span>
                   <div class="text-sm opacity-60">
-                    Angular, Sanity, HTML5, CSS3, JavaScript, TypeScript, Bootstrap, GSAP
+                    {{ 'experience.freelance_stack' | translate }}
                   </div>
                 </div>
               </div>
@@ -275,8 +279,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 4 ? -1 : 4)"
             >
               <div class="flex flex-col">
-                <span class="font-medium">IT Risk Advisory Assistant (Trainee)</span>
-                <span class="text-sm opacity-60">Deloitte (12/2019 - 04/2020)</span>
+                <span class="font-medium">{{ 'experience.trainee_title' | translate }}</span>
+                <span class="text-sm opacity-60">{{
+                  'experience.trainee_company' | translate
+                }}</span>
               </div>
               <ng-icon
                 [name]="
@@ -291,28 +297,31 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
             >
               <div class="py-2">
-                <span>Tasks</span>
+                <span>{{ 'experience.tasks' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Technological risks analysis, Hold client meetings, Prepare PowerPoint
-                  presentations, Create Excel documents with macros
+                  {{ 'experience.trainee_tasks' | translate }}
                 </div>
               </div>
 
               <div class="py-2">
-                <span>Projects</span>
+                <span>{{ 'experience.projects' | translate }}</span>
                 <div class="text-sm opacity-60">
-                  Analysis of Banco Sabadell's main technological risks
+                  {{ 'experience.trainee_projects' | translate }}
                 </div>
               </div>
 
               <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
                 <div class="p-2 pl-0">
-                  <span>Methodologies</span>
-                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                  <span>{{ 'experience.methodologies' | translate }}</span>
+                  <div class="text-sm opacity-60">
+                    {{ 'experience.common_methods' | translate }}
+                  </div>
                 </div>
                 <div class="p-2 pr-0">
-                  <span>Stack</span>
-                  <div class="text-sm opacity-60">Excel, PowerPoint</div>
+                  <span>{{ 'experience.stack' | translate }}</span>
+                  <div class="text-sm opacity-60">
+                    {{ 'experience_extra.trainee_tools' | translate }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -323,49 +332,45 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
       <!-- Languages -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold">Languages</h1>
+        <h1 class="text-lg font-semibold">{{ 'languages.title' | translate }}</h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col">
-            <span>Spanish</span>
-            <span class="text-sm opacity-60">Native</span>
+            <span>{{ 'languages.spanish' | translate }}</span>
+            <span class="text-sm opacity-60">{{ 'languages.native' | translate }}</span>
           </div>
           <div class="flex flex-col">
-            <span>Catalan</span>
-            <span class="text-sm opacity-60">Native</span>
+            <span>{{ 'languages.catalan' | translate }}</span>
+            <span class="text-sm opacity-60">{{ 'languages.native' | translate }}</span>
           </div>
           <div class="flex flex-col">
-            <span>English</span>
-            <span class="text-sm opacity-60">C1 (Cambridge English Advanced)</span>
+            <span>{{ 'languages.english' | translate }}</span>
+            <span class="text-sm opacity-60">{{ 'languages.english_level' | translate }}</span>
           </div>
         </div>
       </section>
 
       <!-- Stack -->
       <section class="flex flex-col">
-        <h1 class="text-lg font-semibold">Stack</h1>
+        <h1 class="text-lg font-semibold">{{ 'stack.title' | translate }}</h1>
         <div class="divide-y divide-neutral-200 dark:divide-neutral-800">
           <div class="py-2">
-            <span>Frontend</span>
-            <div class="text-sm opacity-60">
-              Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript
-            </div>
+            <span>{{ 'stack.frontend' | translate }}</span>
+            <div class="text-sm opacity-60">{{ 'stack.frontend_list' | translate }}</div>
           </div>
 
           <div class="py-2">
-            <span>Backend / Tools</span>
-            <div class="text-sm opacity-60">
-              NestJS, Node.js, Express, Hono, SQL, Git, ESLint, Prettier
-            </div>
+            <span>{{ 'stack.backend' | translate }}</span>
+            <div class="text-sm opacity-60">{{ 'stack.backend_list' | translate }}</div>
           </div>
 
           <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
             <div class="p-2 pl-0">
-              <span>Testing / QA</span>
-              <div class="text-sm opacity-60">Jest, Playwright</div>
+              <span>{{ 'stack.testing' | translate }}</span>
+              <div class="text-sm opacity-60">{{ 'stack.testing_list' | translate }}</div>
             </div>
             <div class="p-2 pr-0">
-              <span>DevOps / Monitoring</span>
-              <div class="text-sm opacity-60">Docker, CI/CD, Grafana</div>
+              <span>{{ 'stack.devops' | translate }}</span>
+              <div class="text-sm opacity-60">{{ 'stack.devops_list' | translate }}</div>
             </div>
           </div>
         </div>
@@ -373,19 +378,15 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
       <!-- Last Public Projects -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold">Last Public Projects</h1>
+        <h1 class="text-lg font-semibold">{{ 'projects.title' | translate }}</h1>
         <div class="flex flex-col gap-2">
           <a class="block" href="https://sunio.app" target="_blank" rel="noopener noreferrer">
             <div
               class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Sunio</span>
-                <span class="text-sm opacity-60 mt-1">
-                  A simple web-based expense sharing app. No downloads, no accounts, and no
-                  registration required. Designed to quickly split and track shared expenses in an
-                  easy and practical way.
-                </span>
+                <span class="font-medium">{{ 'projects.sunio.title' | translate }}</span>
+                <span class="text-sm opacity-60 mt-1">{{ 'projects.sunio.desc' | translate }}</span>
               </div>
             </div>
           </a>
@@ -394,12 +395,8 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Basis NG</span>
-                <span class="text-sm opacity-60 mt-1">
-                  A headless Angular component library. It is split into two packages: Primitives,
-                  which provides unstyled base components, and Styles, a Tailwind-based layer that
-                  integrates seamlessly with custom themes and design systems.
-                </span>
+                <span class="font-medium">{{ 'projects.basis.title' | translate }}</span>
+                <span class="text-sm opacity-60 mt-1">{{ 'projects.basis.desc' | translate }}</span>
               </div>
             </div>
           </a>
@@ -413,12 +410,8 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
               class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
             >
               <div class="flex flex-col">
-                <span class="font-medium">Ahead Careers</span>
-                <span class="text-sm opacity-60 mt-1">
-                  A web platform for a recruiting company, combining a corporate presentation site
-                  with a job listings section. It includes a dashboard to manage offers and showcase
-                  the company’s services in a clear and professional way.
-                </span>
+                <span class="font-medium">{{ 'projects.ahead.title' | translate }}</span>
+                <span class="text-sm opacity-60 mt-1">{{ 'projects.ahead.desc' | translate }}</span>
               </div>
             </div>
           </a>
@@ -426,17 +419,60 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
       </section>
     </main>
     <footer
-      class="sticky bottom-0 flex justify-end w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-t border-neutral-200 dark:border-neutral-800"
+      class="sticky bottom-0 flex items-center justify-between w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-t border-neutral-200 dark:border-neutral-800"
     >
+      <div
+        class="flex"
+        (mouseenter)="hoveringLang.set(true)"
+        (mouseleave)="hoveringLang.set(false)"
+      >
+        <button
+          class="px-3 text-sm bg-neutral-200 dark:bg-neutral-900 text-center py-2 rounded-l-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+          (click)="setLanguage('en')"
+          [class]="
+            !hoveringLang() && translationManager.language() === 'en'
+              ? 'bg-neutral-300 dark:bg-neutral-700'
+              : ''
+          "
+          [attr.aria-label]="'aria.lang_en' | translate"
+        >
+          EN
+        </button>
+        <button
+          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+          (click)="setLanguage('es')"
+          [class]="
+            !hoveringLang() && translationManager.language() === 'es'
+              ? 'bg-neutral-300 dark:bg-neutral-700'
+              : ''
+          "
+          [attr.aria-label]="'aria.lang_es' | translate"
+        >
+          ES
+        </button>
+        <button
+          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 rounded-r-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+          (click)="setLanguage('ca')"
+          [class]="
+            !hoveringLang() && translationManager.language() === 'ca'
+              ? 'bg-neutral-300 dark:bg-neutral-700'
+              : ''
+          "
+          [attr.aria-label]="'aria.lang_ca' | translate"
+        >
+          CA
+        </button>
+      </div>
+
       <a
         class="px-4 text-sm bg-neutral-200 dark:bg-neutral-800 text-center py-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
         href="/pdf/Marc%20Olmos%20Cabezas%20-%20CV.pdf"
         download
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Download CV as PDF"
+        [attr.aria-label]="'aria.download' | translate"
       >
-        Download CV as PDF
+        {{ 'footer.download' | translate }}
       </a>
     </footer>
   `,
@@ -447,4 +483,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 })
 export class App {
   professionalExperienceOpen = signal(-1);
+  translationManager = inject(TranslationManager);
+  hoveringLang = signal(false);
+
+  setLanguage(lang: string) {
+    this.translationManager.setLanguage(lang);
+  }
 }
