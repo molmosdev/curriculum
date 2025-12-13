@@ -32,9 +32,7 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
     <main class="flex flex-col pb-40 w-full max-w-xl mx-auto gap-7 pt-7">
       <!-- Academic Background -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">
-          Academic Background
-        </h1>
+        <h1 class="text-lg font-semibold">Academic Background</h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col">
             <span>Master in High Performance Web Programming</span>
@@ -49,9 +47,7 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
       <!-- Professional Experience -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">
-          Professional Experience
-        </h1>
+        <h1 class="text-lg font-semibold">Professional Experience</h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col gap-2">
             <div
@@ -145,6 +141,10 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
                 <span>Projects</span>
                 <div class="text-sm opacity-60">
                   OVT (Virtual Procedures Office) for Barcelona City Council
+                </div>
+                <div class="text-sm opacity-60">
+                  SEAT — Java application managing vehicle campaign states and mobilization
+                  lifecycle from production to dealerships
                 </div>
               </div>
 
@@ -323,9 +323,7 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
       <!-- Languages -->
       <section class="flex flex-col gap-2">
-        <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">
-          Languages
-        </h1>
+        <h1 class="text-lg font-semibold">Languages</h1>
         <div class="flex flex-col gap-2">
           <div class="flex flex-col">
             <span>Spanish</span>
@@ -344,7 +342,7 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 
       <!-- Stack -->
       <section class="flex flex-col">
-        <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">Stack</h1>
+        <h1 class="text-lg font-semibold">Stack</h1>
         <div class="divide-y divide-neutral-200 dark:divide-neutral-800">
           <div class="py-2">
             <span>Frontend</span>
