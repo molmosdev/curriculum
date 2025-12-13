@@ -371,6 +371,20 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
         </div>
       </section>
     </main>
+    <footer
+      class="sticky bottom-0 flex justify-end w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-t border-neutral-200 dark:border-neutral-800"
+    >
+      <a
+        class="px-4 text-sm bg-neutral-200 dark:bg-neutral-800 text-center py-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+        href="/pdf/Marc%20Olmos%20Cabezas%20-%20CV.pdf"
+        download
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download CV as PDF"
+      >
+        Download CV as PDF
+      </a>
+    </footer>
   `,
   host: {
     class: 'flex flex-col justify-center',
