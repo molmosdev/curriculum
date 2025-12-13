@@ -415,11 +415,11 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
         (mouseleave)="hoveringLang.set(false)"
       >
         <button
-          class="px-3 text-sm bg-neutral-200 dark:bg-neutral-900 text-center py-2 rounded-l-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+          class="px-3 text-sm bg-neutral-200 dark:bg-neutral-900 text-center py-2 rounded-l-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
           (click)="setLanguage('en')"
           [class]="
             !hoveringLang() && translationManager.language() === 'en'
-              ? 'bg-neutral-300 dark:bg-neutral-700'
+              ? 'bg-neutral-300 dark:bg-neutral-800'
               : ''
           "
           [attr.aria-label]="'aria.lang_en' | translate"
@@ -427,11 +427,11 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
           EN
         </button>
         <button
-          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
           (click)="setLanguage('es')"
           [class]="
             !hoveringLang() && translationManager.language() === 'es'
-              ? 'bg-neutral-300 dark:bg-neutral-700'
+              ? 'bg-neutral-300 dark:bg-neutral-800'
               : ''
           "
           [attr.aria-label]="'aria.lang_es' | translate"
@@ -439,11 +439,11 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
           ES
         </button>
         <button
-          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 rounded-r-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 rounded-r-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
           (click)="setLanguage('ca')"
           [class]="
             !hoveringLang() && translationManager.language() === 'ca'
-              ? 'bg-neutral-300 dark:bg-neutral-700'
+              ? 'bg-neutral-300 dark:bg-neutral-800'
               : ''
           "
           [attr.aria-label]="'aria.lang_ca' | translate"
@@ -453,7 +453,7 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
       </div>
 
       <a
-        class="px-4 text-sm bg-neutral-200 dark:bg-neutral-800 text-center py-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+        class="px-4 text-sm bg-neutral-200 dark:bg-neutral-900 text-center py-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
         href="/pdf/Marc%20Olmos%20Cabezas%20-%20CV.pdf"
         download
         target="_blank"
