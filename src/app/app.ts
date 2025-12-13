@@ -382,7 +382,7 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
         <div class="flex flex-col gap-2">
           <a class="block" href="https://sunio.app" target="_blank" rel="noopener noreferrer">
             <div
-              class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
+              class="flex flex-col bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 py-2 px-4 rounded-lg transition-colors"
             >
               <div class="flex flex-col">
                 <span class="font-medium">{{ 'projects.sunio.title' | translate }}</span>
@@ -392,7 +392,7 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
           </a>
           <a class="block" href="https://basis.ng" target="_blank" rel="noopener noreferrer">
             <div
-              class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
+              class="flex flex-col bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 py-2 px-4 rounded-lg transition-colors"
             >
               <div class="flex flex-col">
                 <span class="font-medium">{{ 'projects.basis.title' | translate }}</span>
@@ -407,7 +407,7 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
             rel="noopener noreferrer"
           >
             <div
-              class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
+              class="flex flex-col bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900 dark:hover:bg-neutral-800 py-2 px-4 rounded-lg transition-colors"
             >
               <div class="flex flex-col">
                 <span class="font-medium">{{ 'projects.ahead.title' | translate }}</span>
