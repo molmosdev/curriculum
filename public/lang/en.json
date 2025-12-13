@@ -40,6 +40,7 @@
   },
   "stack": {
     "title": "Stack",
+    "frontend": "Frontend",
     "frontend_list": "Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript",
     "backend": "Backend / Tools",
     "testing": "Testing / QA",
