@@ -9,7 +9,7 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
     <header
       class="flex gap-4 sticky top-0 left-0 w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-b border-neutral-200 dark:border-neutral-800"
     >
-      <img src="/images/profile.jpeg" class="h-25 w-25 rounded" alt="Profile picture" />
+      <img src="/images/profile.jpeg" class="h-27 w-27 rounded" alt="Profile picture" />
       <div class="flex flex-col justify-between max-w-[calc(100vw-10.5rem)]">
         <h1 class="text-xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
           Marc Olmos Cabezas
@@ -53,13 +53,13 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
           Professional Experience
         </h1>
         <div class="flex flex-col gap-2">
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-2">
             <div
               class="flex justify-between items-center cursor-pointer"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 0 ? -1 : 0)"
             >
               <div class="flex flex-col">
-                <span>Senior Frontend Developer</span>
+                <span class="font-medium">Senior Frontend Developer</span>
                 <span class="text-sm opacity-60">Circontrol (05/2023 - now)</span>
               </div>
               <ng-icon
@@ -71,56 +71,54 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
             </div>
 
             @if (professionalExperienceOpen() === 0) {
-            <div class="text-sm mt-1 mb-3">
-              <div
-                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
-              >
-                <div class="p-2">
-                  <strong>Tasks</strong>
-                  <div>
-                    Conduct technical analysis and provide accurate effort estimations. Define
-                    architecture improvements focused on scalability and maintainability, establish
-                    team-wide best practices, and introduce automated linting and formatting
-                    workflows using ESLint and Prettier. Manage progressive Angular upgrades from
-                    v17 through v20, coordinating updates to LTS releases.
-                  </div>
+            <div
+              class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+            >
+              <div class="py-2">
+                <span>Tasks</span>
+                <div class="text-sm opacity-60">
+                  Conduct technical analysis and provide accurate effort estimations. Define
+                  architecture improvements focused on scalability and maintainability, establish
+                  team-wide best practices, and introduce automated linting and formatting workflows
+                  using ESLint and Prettier. Manage progressive Angular upgrades from v17 through
+                  v20, coordinating updates to LTS releases.
                 </div>
+              </div>
 
-                <div class="p-2">
-                  <strong>Projects</strong>
-                  <div>
-                    Contributed to internal initiatives including: WebSetup — a web dashboard for
-                    configuring EV chargers; a touch-screen web application deployed on company
-                    chargers to manage user charging workflows; a middleware service integrating the
-                    backend with charger UI applications; and a Circutor migration project to
-                    replace SCADA with a Grafana-based web solution for charger data management.
-                  </div>
+              <div class="py-2">
+                <span>Projects</span>
+                <div class="text-sm opacity-60">
+                  Contributed to internal initiatives including: WebSetup — a web dashboard for
+                  configuring EV chargers; a touch-screen web application deployed on company
+                  chargers to manage user charging workflows; a middleware service integrating the
+                  backend with charger UI applications; and a Circutor migration project to replace
+                  SCADA with a Grafana-based web solution for charger data management.
                 </div>
+              </div>
 
-                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
-                  <div class="p-2">
-                    <strong>Methodologies</strong>
-                    <div>Agile, Scrum</div>
-                  </div>
-                  <div class="p-2">
-                    <strong>Stack</strong>
-                    <div>
-                      Angular (up to v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3,
-                      JavaScript, TypeScript, PrimeNG, Git, Jest
-                    </div>
+              <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                <div class="p-2 pl-0">
+                  <span>Methodologies</span>
+                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                </div>
+                <div class="p-2 pr-0">
+                  <span>Stack</span>
+                  <div class="text-sm opacity-60">
+                    Angular (up to v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3,
+                    JavaScript, TypeScript, PrimeNG, Git, Jest
                   </div>
                 </div>
               </div>
             </div>
             }
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-2">
             <div
               class="flex justify-between items-center cursor-pointer"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 1 ? -1 : 1)"
             >
               <div class="flex flex-col">
-                <span>Fullstack Developer</span>
+                <span class="font-medium">Fullstack Developer</span>
                 <span class="text-sm opacity-60">Deloitte (11/2021 - 05/2023)</span>
               </div>
               <ng-icon
@@ -132,48 +130,47 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
             </div>
 
             @if (professionalExperienceOpen() === 1) {
-            <div class="text-sm mt-2 mb-3">
-              <div
-                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
-              >
-                <div class="p-2">
-                  <strong>Tasks</strong>
-                  <div>
-                    Hold client meetings, Create and maintain Angular projects, Technical analysis,
-                    Development time estimation, Testing
-                  </div>
+            <div
+              class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+            >
+              <div class="py-2">
+                <span>Tasks</span>
+                <div class="text-sm opacity-60">
+                  Hold client meetings, Create and maintain Angular projects, Technical analysis,
+                  Development time estimation, Testing
                 </div>
+              </div>
 
-                <div class="p-2">
-                  <strong>Projects</strong>
-                  <div>OVT (Virtual Procedures Office) for Barcelona City Council</div>
+              <div class="py-2">
+                <span>Projects</span>
+                <div class="text-sm opacity-60">
+                  OVT (Virtual Procedures Office) for Barcelona City Council
                 </div>
+              </div>
 
-                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
-                  <div class="p-2">
-                    <strong>Methodologies</strong>
-                    <div>Agile, Scrum</div>
-                  </div>
-                  <div class="p-2">
-                    <strong>Stack</strong>
-                    <div>
-                      Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java,
-                      Spring Boot, SQL, GSAP
-                    </div>
+              <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                <div class="p-2 pl-0">
+                  <span>Methodologies</span>
+                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                </div>
+                <div class="p-2 pr-0">
+                  <span>Stack</span>
+                  <div class="text-sm opacity-60">
+                    Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java, Spring
+                    Boot, SQL, GSAP
                   </div>
                 </div>
               </div>
             </div>
             }
           </div>
-
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-2">
             <div
               class="flex justify-between items-center cursor-pointer"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 2 ? -1 : 2)"
             >
               <div class="flex flex-col">
-                <span>Frontend Developer</span>
+                <span class="font-medium">Frontend Developer</span>
                 <span class="text-sm opacity-60">Fun Sport Express SL (03/2021 - 10/2021)</span>
               </div>
               <ng-icon
@@ -185,49 +182,47 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
             </div>
 
             @if (professionalExperienceOpen() === 2) {
-            <div class="text-sm mt-2 mb-3">
-              <div
-                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
-              >
-                <div class="p-2">
-                  <strong>Tasks</strong>
-                  <div>
-                    Hold client meetings, Create and maintain Angular projects, Technical analysis,
-                    Development time estimation, Testing
-                  </div>
+            <div
+              class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+            >
+              <div class="py-2">
+                <span>Tasks</span>
+                <div class="text-sm opacity-60">
+                  Hold client meetings, Create and maintain Angular projects, Technical analysis,
+                  Development time estimation, Testing
                 </div>
+              </div>
 
-                <div class="p-2">
-                  <strong>Projects</strong>
-                  <div>
-                    Internal Angular application for product stock management, Full redesign of one
-                    of the company's websites
-                  </div>
+              <div class="py-2">
+                <span>Projects</span>
+                <div class="text-sm opacity-60">
+                  Internal Angular application for product stock management, Full redesign of one of
+                  the company's websites
                 </div>
+              </div>
 
-                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
-                  <div class="p-2">
-                    <strong>Methodologies</strong>
-                    <div>Agile, Scrum</div>
-                  </div>
-                  <div class="p-2">
-                    <strong>Stack</strong>
-                    <div>Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Jira, GSAP</div>
+              <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                <div class="p-2 pl-0">
+                  <span>Methodologies</span>
+                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                </div>
+                <div class="p-2 pr-0">
+                  <span>Stack</span>
+                  <div class="text-sm opacity-60">
+                    Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Jira, GSAP
                   </div>
                 </div>
               </div>
             </div>
-
             }
           </div>
-
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-2">
             <div
               class="flex justify-between items-center cursor-pointer"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 3 ? -1 : 3)"
             >
               <div class="flex flex-col">
-                <span>Freelance Front-End Developer</span>
+                <span class="font-medium">Freelance Front-End Developer</span>
                 <span class="text-sm opacity-60">Freelance (05/2020 - 10/2021)</span>
               </div>
               <ng-icon
@@ -239,45 +234,48 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
             </div>
 
             @if (professionalExperienceOpen() === 3) {
-            <div class="text-sm mt-2 mb-3">
-              <div
-                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
-              >
-                <div class="p-2">
-                  <strong>Tasks</strong>
-                  <div>
-                    Hold client meetings, Create and maintain Angular projects, Technical analysis,
-                    Development time estimation, Testing
-                  </div>
+            <div
+              class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+            >
+              <div class="py-2">
+                <span>Tasks</span>
+                <div class="text-sm opacity-60">
+                  Hold client meetings, Create and maintain Angular projects, Technical analysis,
+                  Development time estimation, Testing
                 </div>
+              </div>
 
-                <div class="p-2">
-                  <strong>Projects</strong>
-                  <div>Luxury flat rental agency application, Butcher shop web application</div>
+              <div class="py-2">
+                <span>Projects</span>
+                <div class="text-sm opacity-60">
+                  Ahead Careers — Public marketing website to showcase company services and an
+                  internal job dashboard to publish job offers and allow users to apply. Implemented
+                  with Angular and Sanity.
                 </div>
+              </div>
 
-                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
-                  <div class="p-2">
-                    <strong>Methodologies</strong>
-                    <div>Agile, Scrum</div>
-                  </div>
-                  <div class="p-2">
-                    <strong>Stack</strong>
-                    <div>Angular, HTML5, CSS3, JavaScript, TypeScript, Bootstrap, GSAP</div>
+              <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                <div class="p-2 pl-0">
+                  <span>Methodologies</span>
+                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                </div>
+                <div class="p-2 pr-0">
+                  <span>Stack</span>
+                  <div class="text-sm opacity-60">
+                    Angular, Sanity, HTML5, CSS3, JavaScript, TypeScript, Bootstrap, GSAP
                   </div>
                 </div>
               </div>
             </div>
             }
           </div>
-
-          <div class="flex flex-col">
+          <div class="flex flex-col gap-2">
             <div
               class="flex justify-between items-center cursor-pointer"
               (click)="professionalExperienceOpen.set(professionalExperienceOpen() === 4 ? -1 : 4)"
             >
               <div class="flex flex-col">
-                <span>IT Risk Advisory Assistant (Trainee)</span>
+                <span class="font-medium">IT Risk Advisory Assistant (Trainee)</span>
                 <span class="text-sm opacity-60">Deloitte (12/2019 - 04/2020)</span>
               </div>
               <ng-icon
@@ -289,32 +287,32 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
             </div>
 
             @if (professionalExperienceOpen() === 4) {
-            <div class="text-sm mt-2 mb-3">
-              <div
-                class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
-              >
-                <div class="p-2">
-                  <strong>Tasks</strong>
-                  <div>
-                    Technological risks analysis, Hold client meetings, Prepare PowerPoint
-                    presentations, Create Excel documents with macros
-                  </div>
+            <div
+              class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
+            >
+              <div class="py-2">
+                <span>Tasks</span>
+                <div class="text-sm opacity-60">
+                  Technological risks analysis, Hold client meetings, Prepare PowerPoint
+                  presentations, Create Excel documents with macros
                 </div>
+              </div>
 
-                <div class="p-2">
-                  <strong>Projects</strong>
-                  <div>Analysis of Banco Sabadell's main technological risks</div>
+              <div class="py-2">
+                <span>Projects</span>
+                <div class="text-sm opacity-60">
+                  Analysis of Banco Sabadell's main technological risks
                 </div>
+              </div>
 
-                <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
-                  <div class="p-2">
-                    <strong>Methodologies</strong>
-                    <div>Agile, Scrum</div>
-                  </div>
-                  <div class="p-2">
-                    <strong>Stack</strong>
-                    <div>Excel, PowerPoint</div>
-                  </div>
+              <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+                <div class="p-2 pl-0">
+                  <span>Methodologies</span>
+                  <div class="text-sm opacity-60">Agile, Scrum</div>
+                </div>
+                <div class="p-2 pr-0">
+                  <span>Stack</span>
+                  <div class="text-sm opacity-60">Excel, PowerPoint</div>
                 </div>
               </div>
             </div>
@@ -345,33 +343,31 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
       </section>
 
       <!-- Stack -->
-      <section class="flex flex-col gap-2">
+      <section class="flex flex-col">
         <h1 class="text-lg font-semibold sticky bg-neutral-50 dark:bg-neutral-950 z-9">Stack</h1>
-        <div class="text-sm mt-1 mb-3">
-          <div
-            class="border-t border-neutral-200 dark:border-neutral-800 divide-y divide-neutral-200 dark:divide-neutral-800"
-          >
-            <div class="p-2">
-              <strong>Frontend</strong>
-              <div>
-                Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript
-              </div>
+        <div class="divide-y divide-neutral-200 dark:divide-neutral-800">
+          <div class="py-2">
+            <span>Frontend</span>
+            <div class="text-sm opacity-60">
+              Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript
             </div>
+          </div>
 
-            <div class="p-2">
-              <strong>Backend / Tools</strong>
-              <div>NestJS, Node.js, Express, Hono, SQL, Git, ESLint, Prettier</div>
+          <div class="py-2">
+            <span>Backend / Tools</span>
+            <div class="text-sm opacity-60">
+              NestJS, Node.js, Express, Hono, SQL, Git, ESLint, Prettier
             </div>
+          </div>
 
-            <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
-              <div class="p-2">
-                <strong>Testing / QA</strong>
-                <div>Jest, Playwright</div>
-              </div>
-              <div class="p-2">
-                <strong>DevOps / Monitoring</strong>
-                <div>Docker, CI/CD, Grafana</div>
-              </div>
+          <div class="grid grid-cols-2 divide-x divide-neutral-200 dark:divide-neutral-800">
+            <div class="p-2 pl-0">
+              <span>Testing / QA</span>
+              <div class="text-sm opacity-60">Jest, Playwright</div>
+            </div>
+            <div class="p-2 pr-0">
+              <span>DevOps / Monitoring</span>
+              <div class="text-sm opacity-60">Docker, CI/CD, Grafana</div>
             </div>
           </div>
         </div>
