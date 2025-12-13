@@ -370,6 +370,60 @@ import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
           </div>
         </div>
       </section>
+
+      <!-- Last Public Projects -->
+      <section class="flex flex-col gap-2">
+        <h1 class="text-lg font-semibold">Last Public Projects</h1>
+        <div class="flex flex-col gap-2">
+          <a class="block" href="https://sunio.app" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
+            >
+              <div class="flex flex-col">
+                <span class="font-medium">Sunio</span>
+                <span class="text-sm opacity-60 mt-1">
+                  A simple web-based expense sharing app. No downloads, no accounts, and no
+                  registration required. Designed to quickly split and track shared expenses in an
+                  easy and practical way.
+                </span>
+              </div>
+            </div>
+          </a>
+          <a class="block" href="https://basis.ng" target="_blank" rel="noopener noreferrer">
+            <div
+              class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
+            >
+              <div class="flex flex-col">
+                <span class="font-medium">Basis NG</span>
+                <span class="text-sm opacity-60 mt-1">
+                  A headless Angular component library. It is split into two packages: Primitives,
+                  which provides unstyled base components, and Styles, a Tailwind-based layer that
+                  integrates seamlessly with custom themes and design systems.
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            class="block"
+            href="https://aheadcareers.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              class="flex flex-col hover:bg-neutral-200 dark:hover:bg-neutral-950 py-2 px-4 rounded-lg transition-colors"
+            >
+              <div class="flex flex-col">
+                <span class="font-medium">Ahead Careers</span>
+                <span class="text-sm opacity-60 mt-1">
+                  A web platform for a recruiting company, combining a corporate presentation site
+                  with a job listings section. It includes a dashboard to manage offers and showcase
+                  the company’s services in a clear and professional way.
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
     </main>
     <footer
       class="sticky bottom-0 flex justify-end w-full bg-neutral-50 dark:bg-neutral-950 z-10 py-5 border-t border-neutral-200 dark:border-neutral-800"
