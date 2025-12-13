@@ -1,4 +1,4 @@
-import { Component, signal, inject, afterRenderEffect } from '@angular/core';
+import { Component, signal, inject, afterRenderEffect, OnInit } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideChevronDown, lucideChevronUp } from '@ng-icons/lucide';
 import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
@@ -474,6 +474,7 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
       >
         {{ 'footer.download' | translate }}
       </a>
+      {{ translationManager.language() }}
     </footer>
   `,
   host: {
@@ -481,7 +482,7 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
   },
   providers: [provideIcons({ lucideChevronDown, lucideChevronUp })],
 })
-export class App {
+export class App implements OnInit {
   professionalExperienceOpen = signal(-1);
   translationManager = inject(TranslationManager);
   hoveringLang = signal(false);
@@ -490,7 +491,7 @@ export class App {
     this.translationManager.setLanguage(lang);
   }
 
-  constructor() {
-    afterRenderEffect(() => this.translationManager.setLanguage('en'));
+  ngOnInit() {
+    this.translationManager.setLanguage('en');
   }
 }
