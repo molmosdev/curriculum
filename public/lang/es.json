@@ -1,17 +1,11 @@
 {
   "header": {
-    "name": "Marc Olmos Cabezas",
-    "role": "Desarrollador Frontend Senior",
-    "location": "Mollet del Vallés, Barcelona",
-    "email": "olmoscabezasmarc@gmail.com",
-    "phone": "606872046"
+    "role": "Desarrollador Frontend Senior"
   },
   "academic": {
     "title": "Formación Académica",
     "masters": "Máster en Programación Web de Alto Rendimiento",
-    "masters_institution": "URL (2020 - 2022)",
-    "degree": "Grado en Empresa y Tecnología",
-    "degree_institution": "UAB (2016 - 2020)"
+    "degree": "Grado en Empresa y Tecnología"
   },
   "experience": {
     "title": "Experiencia Profesional",
@@ -63,15 +57,12 @@
   "projects": {
     "title": "Últimos Proyectos Públicos",
     "sunio": {
-      "title": "Sunio",
       "desc": "Una aplicación web sencilla para compartir gastos. Sin descargas, sin cuentas y sin registro. Diseñada para dividir y seguir gastos compartidos de manera rápida y práctica."
     },
     "basis": {
-      "title": "Basis NG",
       "desc": "Una librería de componentes Angular headless. Está dividida en dos paquetes: Primitives, que aporta componentes base sin estilo, y Styles, una capa basada en Tailwind que se integra con temas personalizados y sistemas de diseño."
     },
     "ahead": {
-      "title": "Ahead Careers",
       "desc": "Una plataforma web para una empresa de reclutamiento, que combina un sitio corporativo con una sección de ofertas de empleo. Incluye un panel para gestionar ofertas y mostrar los servicios de la empresa de forma clara y profesional."
     }
   },
@@ -87,8 +78,5 @@
     "lang_es": "Español",
     "lang_ca": "Catalán"
   },
-  "experience_extra": {
-    "fullstack_seat_extra": "SEAT — aplicación Java que gestiona los estados de campañas de vehículos y el ciclo de movilización desde producción hasta concesionarios",
-    "trainee_tools": "Excel, PowerPoint"
-  }
+  "experience_extra": {}
 }

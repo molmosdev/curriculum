@@ -1,17 +1,11 @@
 {
   "header": {
-    "name": "Marc Olmos Cabezas",
-    "role": "Desenvolupador Frontend Senior",
-    "location": "Mollet del Vallés, Barcelona",
-    "email": "olmoscabezasmarc@gmail.com",
-    "phone": "606872046"
+    "role": "Desenvolupador Frontend Senior"
   },
   "academic": {
     "title": "Formació Acadèmica",
     "masters": "Màster en Programació Web d'Alt Rendiment",
-    "masters_institution": "URL (2020 - 2022)",
-    "degree": "Grau en Empresa i Tecnologia",
-    "degree_institution": "UAB (2016 - 2020)"
+    "degree": "Grau en Empresa i Tecnologia"
   },
   "experience": {
     "title": "Experiència Professional",
@@ -63,15 +57,12 @@
   "projects": {
     "title": "Últims Projectes Públics",
     "sunio": {
-      "title": "Sunio",
       "desc": "Una aplicació web senzilla per compartir despeses. Sense descàrregues, sense comptes i sense registre. Dissenyada per dividir i seguir despeses compartides de manera ràpida i pràctica."
     },
     "basis": {
-      "title": "Basis NG",
       "desc": "Una biblioteca de components Angular headless. Està dividida en dos paquets: Primitives, que aporta components base sense estil, i Styles, una capa basada en Tailwind que s'integra amb temes personalitzats i sistemes de disseny."
     },
     "ahead": {
-      "title": "Ahead Careers",
       "desc": "Una plataforma web per a una empresa de reclutament, que combina un lloc corporatiu amb una secció d'ofertes de feina. Inclou un panell per gestionar ofertes i mostrar els serveis de l'empresa de manera clara i professional."
     }
   },
@@ -87,8 +78,5 @@
     "lang_es": "Castellà",
     "lang_ca": "Català"
   },
-  "experience_extra": {
-    "fullstack_seat_extra": "SEAT — aplicació Java que gestiona els estats de campanyes de vehicles i el cicle de mobilització des de producció fins a concessionaris",
-    "trainee_tools": "Excel, PowerPoint"
-  }
+  "experience_extra": {}
 }

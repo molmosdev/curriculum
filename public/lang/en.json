@@ -1,17 +1,11 @@
 {
   "header": {
-    "name": "Marc Olmos Cabezas",
-    "role": "Senior Frontend Developer",
-    "location": "Mollet del Vallés, Barcelona",
-    "email": "olmoscabezasmarc@gmail.com",
-    "phone": "606872046"
+    "role": "Senior Frontend Developer"
   },
   "academic": {
     "title": "Academic Background",
     "masters": "Master in High Performance Web Programming",
-    "masters_institution": "URL (2020 - 2022)",
-    "degree": "Degree in Business and Technology",
-    "degree_institution": "UAB (2016 - 2020)"
+    "degree": "Degree in Business and Technology"
   },
   "experience": {
     "title": "Professional Experience",
@@ -20,19 +14,14 @@
     "methodologies": "Methodologies",
     "stack": "Stack",
     "senior_title": "Senior Frontend Developer",
-    "senior_company": "Circontrol (05/2023 - now)",
     "senior_tasks": "Conduct technical analysis and provide accurate effort estimations. Define architecture improvements focused on scalability and maintainability, establish team-wide best practices, and introduce automated linting and formatting workflows using ESLint and Prettier. Manage progressive Angular upgrades from v17 through v20, coordinating updates to LTS releases.",
     "senior_projects": "Contributed to internal initiatives including: WebSetup — a web dashboard for configuring EV chargers; a touch-screen web application deployed on company chargers to manage user charging workflows; a middleware service integrating the backend with charger UI applications; and a Circutor migration project to replace SCADA with a Grafana-based web solution for charger data management.",
     "fullstack_title": "Fullstack Developer",
-    "fullstack_company": "Deloitte (11/2021 - 05/2023)",
     "fullstack_tasks": "Hold client meetings, Create and maintain Angular projects, Technical analysis, Development time estimation, Testing",
     "fullstack_projects": "OVT (Virtual Procedures Office) for Barcelona City Council; SEAT — Java application managing vehicle campaign states and mobilization lifecycle from production to dealerships",
     "frontend_title": "Frontend Developer",
-    "frontend_company": "Fun Sport Express SL (03/2021 - 10/2021)",
     "freelance_title": "Freelance Front-End Developer",
-    "freelance_company": "Freelance (05/2020 - 10/2021)",
     "trainee_title": "IT Risk Advisory Assistant (Trainee)",
-    "trainee_company": "Deloitte (12/2019 - 04/2020)",
     "common_methods": "Agile, Scrum",
     "senior_stack": "Angular (up to v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3, JavaScript, TypeScript, PrimeNG, Git, Jest",
     "fullstack_stack": "Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java, Spring Boot, SQL, GSAP",
@@ -51,41 +40,29 @@
   },
   "stack": {
     "title": "Stack",
-    "frontend": "Frontend",
     "frontend_list": "Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript",
     "backend": "Backend / Tools",
-    "backend_list": "NestJS, Node.js, Express, Hono, SQL, Git, ESLint, Prettier",
     "testing": "Testing / QA",
-    "testing_list": "Jest, Playwright",
-    "devops": "DevOps / Monitoring",
-    "devops_list": "Docker, CI/CD, Grafana"
+    "devops": "DevOps / Monitoring"
   },
   "projects": {
     "title": "Last Public Projects",
     "sunio": {
-      "title": "Sunio",
       "desc": "A simple web-based expense sharing app. No downloads, no accounts, and no registration required. Designed to quickly split and track shared expenses in an easy and practical way."
     },
     "basis": {
-      "title": "Basis NG",
       "desc": "A headless Angular component library. It is split into two packages: Primitives, which provides unstyled base components, and Styles, a Tailwind-based layer that integrates seamlessly with custom themes and design systems."
     },
     "ahead": {
-      "title": "Ahead Careers",
       "desc": "A web platform for a recruiting company, combining a corporate presentation site with a job listings section. It includes a dashboard to manage offers and showcase the company’s services in a clear and professional way."
     }
   },
   "footer": {
     "download": "Download CV as PDF"
   },
-  "alt": {
-    "profile": "Profile picture"
-  },
+  "alt": {},
   "aria": {
-    "download": "Download CV as PDF",
-    "lang_en": "English",
-    "lang_es": "Spanish",
-    "lang_ca": "Catalan"
+    "download": "Download CV as PDF"
   },
   "experience_extra": {
     "fullstack_seat_extra": "SEAT — Java application managing vehicle campaign states and mobilization lifecycle from production to dealerships",
