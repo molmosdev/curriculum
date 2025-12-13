@@ -415,36 +415,36 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
         (mouseleave)="hoveringLang.set(false)"
       >
         <button
-          class="px-3 text-sm bg-neutral-200 dark:bg-neutral-900 text-center py-2 rounded-l-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
+          class="px-3 text-sm  text-center py-2 rounded-l-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
           (click)="setLanguage('en')"
           [class]="
             !hoveringLang() && translationManager.language() === 'en'
               ? 'bg-neutral-300 dark:bg-neutral-800'
-              : ''
+              : 'bg-neutral-200 dark:bg-neutral-900'
           "
           [attr.aria-label]="'aria.lang_en' | translate"
         >
           EN
         </button>
         <button
-          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
+          class="px-3 text-sm text-cente py-2 hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
           (click)="setLanguage('es')"
           [class]="
             !hoveringLang() && translationManager.language() === 'es'
               ? 'bg-neutral-300 dark:bg-neutral-800'
-              : ''
+              : 'bg-neutral-200 dark:bg-neutral-900'
           "
           [attr.aria-label]="'aria.lang_es' | translate"
         >
           ES
         </button>
         <button
-          class="px-3 text-sm text-center bg-neutral-200 dark:bg-neutral-900 py-2 rounded-r-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
+          class="px-3 text-sm text-center  py-2 rounded-r-lg hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors"
           (click)="setLanguage('ca')"
           [class]="
             !hoveringLang() && translationManager.language() === 'ca'
               ? 'bg-neutral-300 dark:bg-neutral-800'
-              : ''
+              : 'bg-neutral-200 dark:bg-neutral-900'
           "
           [attr.aria-label]="'aria.lang_ca' | translate"
         >
