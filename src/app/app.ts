@@ -23,9 +23,9 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
         </span>
         <a
           class="text-sm opacity-60 underline overflow-hidden text-ellipsis"
-          href="mailto:olmoscabezasmarc@gmail.com"
+          href="mailto:hello@molmos.dev"
         >
-          olmoscabezasmarc@gmail.com
+          hello@molmos.dev
         </a>
         <a class="text-sm opacity-60 underline" href="tel:+34606872046">+34 606872046</a>
       </div>
