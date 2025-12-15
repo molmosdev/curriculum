@@ -340,7 +340,8 @@ import { TranslatePipe, TranslationManager } from '@basis-ng/primitives';
           <div class="py-2">
             <span>{{ 'stack.frontend' | translate }}</span>
             <div class="text-sm opacity-60">
-              Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript
+              Angular (up to v20 LTS), RxJS, Signals, PrimeNG, HTML5, CSS3, JavaScript, TypeScript,
+              Tailwind
             </div>
           </div>
 
