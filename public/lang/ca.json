@@ -31,7 +31,9 @@
     "senior_stack": "Angular (fins a v20 LTS), RxJS, Signals, NestJS, ESLint, Prettier, HTML5, CSS3, JavaScript, TypeScript, PrimeNG, Git, Jest",
     "fullstack_stack": "Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Bootstrap, Java, Spring Boot, SQL, GSAP",
     "frontend_stack": "Angular, HTML5, CSS3, JavaScript, TypeScript, Material, Jira, GSAP",
+    "frontend_projects": "Aplicació Angular interna per a la gestió d'stock de productes, Redisseny complet d'un dels llocs web de l'empresa",
     "freelance_stack": "Angular, Sanity, HTML5, CSS3, JavaScript, TypeScript, Bootstrap, GSAP",
+    "freelance_projects": "Ahead Careers — Lloc web públic de màrqueting per mostrar els serveis de l'empresa i un tauler intern de feina per publicar ofertes de treball i permetre als usuaris postular-s'hi. Implementat amb Angular i Sanity.",
     "trainee_tasks": "Anàlisi de riscos tecnològics, Reunions amb clients, Preparació de presentacions en PowerPoint, Creació de documents Excel amb macros",
     "trainee_projects": "Anàlisi dels principals riscos tecnològics de Banco Sabadell"
   },
